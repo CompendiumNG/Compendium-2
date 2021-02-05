@@ -1,0 +1,75 @@
+05-October-2010_15-31-48: String index out of range: 9
+java.lang.StringIndexOutOfBoundsException: String index out of range: 9
+05-October-2010_15-31-48: 	at java.lang.String.substring(String.java:1765)
+05-October-2010_15-31-48: 	at com.compendium.core.CoreUtilities.isNewerVersion(CoreUtilities.java:130)
+05-October-2010_15-31-48: 	at com.compendium.ProjectCompendium.checkForUpdates(ProjectCompendium.java:338)
+05-October-2010_15-31-48: 	at com.compendium.ProjectCompendium.<init>(ProjectCompendium.java:176)
+05-October-2010_15-31-48: 	at com.compendium.ProjectCompendium.main(ProjectCompendium.java:141)
+java.sql.SQLException: Database 'testing_delete_1286289006685' not found.
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.jdbc.Driver30.getNewEmbedConnection(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+05-October-2010_15-31-55: 	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+05-October-2010_15-31-55: 	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+05-October-2010_15-31-55: 	at java.sql.DriverManager.getConnection(DriverManager.java:193)
+05-October-2010_15-31-55: 	at com.compendium.core.db.management.DBConnectionManager.connect(DBConnectionManager.java:413)
+05-October-2010_15-31-55: 	at com.compendium.core.db.management.DBConnectionManager.newConnection(DBConnectionManager.java:388)
+05-October-2010_15-31-55: 	at com.compendium.core.db.management.DBConnectionManager.getConnection(DBConnectionManager.java:536)
+05-October-2010_15-31-55: 	at com.compendium.core.db.management.DBDatabaseManager.requestConnection(DBDatabaseManager.java:245)
+05-October-2010_15-31-55: 	at com.compendium.core.db.management.DBAdminDatabase.getSchemaStatusForDatabase(DBAdminDatabase.java:420)
+05-October-2010_15-31-55: 	at com.compendium.ui.dialogs.UILogonDialog.openProject(UILogonDialog.java:381)
+05-October-2010_15-31-55: 	at com.compendium.ui.dialogs.UILogonDialog.actionPerformed(UILogonDialog.java:349)
+05-October-2010_15-31-55: 	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1849)
+05-October-2010_15-31-55: 	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2169)
+05-October-2010_15-31-55: 	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:420)
+05-October-2010_15-31-55: 	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:258)
+05-October-2010_15-31-55: 	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+05-October-2010_15-31-55: 	at java.awt.Component.processMouseEvent(Component.java:5517)
+05-October-2010_15-31-55: 	at javax.swing.JComponent.processMouseEvent(JComponent.java:3135)
+05-October-2010_15-31-55: 	at java.awt.Component.processEvent(Component.java:5282)
+05-October-2010_15-31-55: 	at java.awt.Container.processEvent(Container.java:1966)
+05-October-2010_15-31-55: 	at java.awt.Component.dispatchEventImpl(Component.java:3984)
+05-October-2010_15-31-55: 	at java.awt.Container.dispatchEventImpl(Container.java:2024)
+05-October-2010_15-31-55: 	at java.awt.Component.dispatchEvent(Component.java:3819)
+05-October-2010_15-31-55: 	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4212)
+05-October-2010_15-31-55: 	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:3892)
+05-October-2010_15-31-55: 	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:3822)
+05-October-2010_15-31-55: 	at java.awt.Container.dispatchEventImpl(Container.java:2010)
+05-October-2010_15-31-55: 	at java.awt.Window.dispatchEventImpl(Window.java:1791)
+05-October-2010_15-31-55: 	at java.awt.Component.dispatchEvent(Component.java:3819)
+05-October-2010_15-31-55: 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:463)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:153)
+05-October-2010_15-31-55: 	at java.awt.Dialog$1.run(Dialog.java:535)
+05-October-2010_15-31-55: 	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+05-October-2010_15-31-55: 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:461)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+05-October-2010_15-31-55: 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+05-October-2010_15-31-55: Error: (DBConnectionManager.getConnection) Database 'testing_delete_1286289006685' not found.
+05-October-2010_15-31-55: Exception: (DBAdminDatabase.getSchemaStatusForDatabase)
+
+null
+05-October-2010_15-31-58: Fobs4JMF - Native shared library found
+05-October-2010_15-31-58: Fobs4JMF - Native shared library found
+05-October-2010_15-31-58: Little Endian
+05-October-2010_15-31-58: AVCODEC: Constructor
+05-October-2010_15-31-58: Setting datasource to com.omnividea.media.protocol.file.DataSource@1e40274 content type = video.ffmpeg
+05-October-2010_15-31-58: Opening Thread[JMF thread: com.sun.media.PlaybackEngine@1ed688f[ com.sun.media.PlaybackEngine@1ed688f ] ( configureThread),9,system]
+05-October-2010_15-31-59: AVCODEC: close
+05-October-2010_15-32-12: Resetting Thread[Loop thread: com.omnividea.media.parser.video.AudioTrack@dcb6b4,5,system]
+05-October-2010_15-32-12: Opening Thread[Loop thread: com.omnividea.media.parser.video.AudioTrack@dcb6b4,5,system]
+05-October-2010_15-32-12: Closing Thread[AWT-EventQueue-0,6,main]
+05-October-2010_15-32-28: Error:The' testing delete' project could not be deleted due to the following error:
+
+Cannot delete or update a parent row: a foreign key constraint fails

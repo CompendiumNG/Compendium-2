@@ -1,0 +1,62 @@
+17-May-2011_09-52-28: String index out of range: 9
+java.lang.StringIndexOutOfBoundsException: String index out of range: 9
+17-May-2011_09-52-28: 	at java.lang.String.substring(Unknown Source)
+17-May-2011_09-52-28: 	at com.compendium.core.CoreUtilities.isNewerVersion(CoreUtilities.java:130)
+17-May-2011_09-52-28: 	at com.compendium.ProjectCompendium.checkForUpdates(ProjectCompendium.java:338)
+17-May-2011_09-52-28: 	at com.compendium.ProjectCompendium.<init>(ProjectCompendium.java:176)
+17-May-2011_09-52-28: 	at com.compendium.ProjectCompendium.main(ProjectCompendium.java:141)
+17-May-2011_09-52-33: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+17-May-2011_09-52-33: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+17-May-2011_09-52-33: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+17-May-2011_09-52-33: 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+17-May-2011_09-52-33: 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2103)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+17-May-2011_09-52-33: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+17-May-2011_09-52-33: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+17-May-2011_09-52-33: 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+17-May-2011_09-52-33: 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+17-May-2011_09-52-33: 	at java.sql.DriverManager.getConnection(Unknown Source)
+17-May-2011_09-52-33: 	at java.sql.DriverManager.getConnection(Unknown Source)
+17-May-2011_09-52-33: 	at com.compendium.core.db.management.DBConnectionManager.getMySQLConnection(DBConnectionManager.java:235)
+17-May-2011_09-52-33: 	at com.compendium.core.db.management.DBConnectionManager.getPlainConnection(DBConnectionManager.java:169)
+17-May-2011_09-52-33: 	at com.compendium.core.db.management.DBAdminDatabase.checkAdminDatabase(DBAdminDatabase.java:231)
+17-May-2011_09-52-33: 	at com.compendium.ui.ProjectCompendiumFrame.connectToServices(ProjectCompendiumFrame.java:952)
+17-May-2011_09-52-33: 	at com.compendium.ui.ProjectCompendiumFrame.init(ProjectCompendiumFrame.java:653)
+17-May-2011_09-52-33: 	at com.compendium.ui.ProjectCompendiumFrame.initialiseFrame(ProjectCompendiumFrame.java:587)
+17-May-2011_09-52-33: 	at com.compendium.ProjectCompendium.<init>(ProjectCompendium.java:200)
+17-May-2011_09-52-33: 	at com.compendium.ProjectCompendium.main(ProjectCompendium.java:141)
+17-May-2011_09-52-33: Caused by: java.net.ConnectException: Connection refused: connect
+17-May-2011_09-52-33: 	at java.net.PlainSocketImpl.socketConnect(Native Method)
+17-May-2011_09-52-33: 	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.PlainSocketImpl.connect(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.SocksSocketImpl.connect(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.Socket.connect(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.Socket.connect(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.Socket.<init>(Unknown Source)
+17-May-2011_09-52-33: 	at java.net.Socket.<init>(Unknown Source)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:280)
+17-May-2011_09-52-33: 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2026)
+17-May-2011_09-52-33: 	... 19 more
+17-May-2011_09-52-33: Error:Error Connecting to MySQL database localhost
+Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+17-May-2011_09-52-48: returning icon for: http://compendium.open.ac.uk/institute/training/videos/
+17-May-2011_09-52-48: returning icon for: http://compendium.open.ac.uk/institute/training/videos/
+17-May-2011_09-52-48: returning icon for: System\resources\Help\Movies\welcome.html
+17-May-2011_09-52-48: returning icon for: System\resources\Help\Movies\welcome.html
+17-May-2011_09-53-12: Unable to shutdown Derby: Derby system shutdown.

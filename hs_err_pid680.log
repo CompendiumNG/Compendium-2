@@ -1,0 +1,385 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6989794c, pid=680, tid=4384
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_13-b05 mixed mode, sharing)
+# Problematic frame:
+# C  [fobs4jmf.dll+0x45794c]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x02fa4560):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=4384]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x4255434b
+
+Registers:
+EAX=0x4255434b, EBX=0x4255434b, ECX=0x2af500b6, EDX=0x0a040002
+ESP=0x032de5b0, EBP=0x032de618, ESI=0x00000000, EDI=0x02fa4560
+EIP=0x6989794c, EFLAGS=0x00210202
+
+Top of Stack: (sp=0x032de5b0)
+0x032de5b0:   77c12070 ffffffff 77c2c2e3 6982ef5e
+0x032de5c0:   058732f0 ffffffff 02fc7248 698d065d
+0x032de5d0:   4255434b 00000000 032df324 00000000
+0x032de5e0:   0004aee9 0004aee9 00000000 6944422e
+0x032de5f0:   02fc7248 02fa4560 032de618 69aca6ec
+0x032de600:   69b04ee0 0000000a 0000000c 00000000
+0x032de610:   0004aee9 0004aee9 032de678 69444c70
+0x032de620:   05e4baa0 69aca6bc 40390000 69a8582d 
+
+Instructions: (pc=0x6989794c)
+0x6989793c:   83 c4 18 5b eb 86 66 90 53 83 ec 18 8b 5c 24 20
+0x6989794c:   8b 03 85 c0 74 0e 0f be 50 ff 29 d0 89 04 24 e8 
+
+
+Stack: [0x032a0000,0x032e0000),  sp=0x032de5b0,  free space=249k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [fobs4jmf.dll+0x45794c]
+C  [fobs4jmf.dll+0x4c70]
+C  [fobs4jmf.dll+0x14f4]
+j  com.omnividea.media.parser.video.Parser.avOpen(J)Z+0
+j  com.omnividea.media.parser.video.Parser.setSource(Ljavax/media/protocol/DataSource;)V+114
+j  com.sun.media.BasicSourceModule.createDemultiplexer(Ljavax/media/protocol/DataSource;)Ljavax/media/Demultiplexer;+71
+j  com.sun.media.BasicSourceModule.createModule(Ljavax/media/protocol/DataSource;)Lcom/sun/media/BasicSourceModule;+1
+j  com.sun.media.PlaybackEngine.setSource(Ljavax/media/protocol/DataSource;)V+2
+j  com.sun.media.MediaPlayer.setSource(Ljavax/media/protocol/DataSource;)V+5
+j  javax.media.Manager.createPlayerForSource(Ljavax/media/protocol/DataSource;Ljava/lang/String;[Z)Ljavax/media/Player;+57
+j  javax.media.Manager.createPlayerForContent(Ljavax/media/MediaLocator;ZLjava/util/Hashtable;)Ljavax/media/Player;+105
+j  javax.media.Manager.createPlayer(Ljavax/media/MediaLocator;)Ljavax/media/Player;+78
+j  javax.media.Manager.createPlayer(Ljava/net/URL;)Ljavax/media/Player;+8
+j  javax.media.Manager.createRealizedPlayer(Ljava/net/URL;)Ljavax/media/Player;+1
+j  com.compendium.ui.movie.UIMoviePanel.createMoviePlayer(Ljava/lang/String;)Ljavax/media/Player;+37
+j  com.compendium.ui.movie.UIMovieMapViewPane.addMovie(Lcom/compendium/core/datamodel/Movie;)Lcom/compendium/ui/movie/UIMoviePanel;+26
+j  com.compendium.ui.movie.UIMovieMapViewPane.processMovie(Lcom/compendium/core/datamodel/Movie;)Lcom/compendium/ui/movie/UIMoviePanel;+28
+j  com.compendium.ui.movie.UIMovieMapViewPane.propertyChange(Ljava/beans/PropertyChangeEvent;)V+188
+J  com.compendium.core.datamodel.PCObject.firePropertyChange(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  com.compendium.core.datamodel.MovieMapView.addMovie(Ljava/lang/String;Ljava/lang/String;JLjava/util/Vector;)Lcom/compendium/core/datamodel/Movie;+172
+j  com.compendium.ui.movie.UIMovieViewPanel$4.insertUpdate(Ljavax/swing/event/DocumentEvent;)V+126
+j  javax.swing.text.AbstractDocument.fireInsertUpdate(Ljavax/swing/event/DocumentEvent;)V+40
+j  javax.swing.text.AbstractDocument.handleInsertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+162
+j  javax.swing.text.AbstractDocument.insertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+46
+j  javax.swing.text.PlainDocument.insertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+104
+j  javax.swing.text.AbstractDocument.replace(IILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+74
+j  javax.swing.text.JTextComponent.setText(Ljava/lang/String;)V+25
+j  com.compendium.ui.movie.UIMovieViewPanel$5.actionPerformed(Ljava/awt/event/ActionEvent;)V+253
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Ljava/awt/event/MouseEvent;)V+35
+j  java.awt.AWTEventMulticaster.mouseReleased(Ljava/awt/event/MouseEvent;)V+8
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+J  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+J  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(Ljava/awt/Conditional;Ljava/awt/Component;)V+4
+j  java.awt.Dialog$1.run()V+20
+j  java.awt.Dialog$2.run()Ljava/lang/Object;+4
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x872c4]
+V  [jvm.dll+0xdf93a]
+V  [jvm.dll+0x87195]
+C  [java.dll+0x1015]
+j  java.awt.Dialog.show()V+98
+j  java.awt.Component.show(Z)V+5
+j  java.awt.Component.setVisible(Z)V+2
+j  com.compendium.ui.UIViewFrame.showContentDialog(I)Lcom/compendium/ui/dialogs/UINodeContentDialog;+27
+j  com.compendium.ui.movie.UIMovieMapViewFrame.showEditDialog()Lcom/compendium/ui/dialogs/UINodeContentDialog;+2
+j  com.compendium.ui.plaf.ViewPaneUI.mouseClicked(Ljava/awt/event/MouseEvent;)V+357
+j  com.compendium.ui.movie.MovieMapViewPaneUI.mouseClicked(Ljava/awt/event/MouseEvent;)V+15
+j  java.awt.AWTEventMulticaster.mouseClicked(Ljava/awt/event/MouseEvent;)V+21
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+74
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x872c4]
+V  [jvm.dll+0xdf93a]
+V  [jvm.dll+0x87195]
+V  [jvm.dll+0x86ef2]
+V  [jvm.dll+0xa1d5d]
+V  [jvm.dll+0x11115e]
+V  [jvm.dll+0x11112c]
+C  [MSVCRT.dll+0x2a3b0]
+C  [kernel32.dll+0xb729]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.omnividea.media.parser.video.Parser.avOpen(J)Z+0
+j  com.omnividea.media.parser.video.Parser.setSource(Ljavax/media/protocol/DataSource;)V+114
+j  com.sun.media.BasicSourceModule.createDemultiplexer(Ljavax/media/protocol/DataSource;)Ljavax/media/Demultiplexer;+71
+j  com.sun.media.BasicSourceModule.createModule(Ljavax/media/protocol/DataSource;)Lcom/sun/media/BasicSourceModule;+1
+j  com.sun.media.PlaybackEngine.setSource(Ljavax/media/protocol/DataSource;)V+2
+j  com.sun.media.MediaPlayer.setSource(Ljavax/media/protocol/DataSource;)V+5
+j  javax.media.Manager.createPlayerForSource(Ljavax/media/protocol/DataSource;Ljava/lang/String;[Z)Ljavax/media/Player;+57
+j  javax.media.Manager.createPlayerForContent(Ljavax/media/MediaLocator;ZLjava/util/Hashtable;)Ljavax/media/Player;+105
+j  javax.media.Manager.createPlayer(Ljavax/media/MediaLocator;)Ljavax/media/Player;+78
+j  javax.media.Manager.createPlayer(Ljava/net/URL;)Ljavax/media/Player;+8
+j  javax.media.Manager.createRealizedPlayer(Ljava/net/URL;)Ljavax/media/Player;+1
+j  com.compendium.ui.movie.UIMoviePanel.createMoviePlayer(Ljava/lang/String;)Ljavax/media/Player;+37
+j  com.compendium.ui.movie.UIMovieMapViewPane.addMovie(Lcom/compendium/core/datamodel/Movie;)Lcom/compendium/ui/movie/UIMoviePanel;+26
+j  com.compendium.ui.movie.UIMovieMapViewPane.processMovie(Lcom/compendium/core/datamodel/Movie;)Lcom/compendium/ui/movie/UIMoviePanel;+28
+j  com.compendium.ui.movie.UIMovieMapViewPane.propertyChange(Ljava/beans/PropertyChangeEvent;)V+188
+J  com.compendium.core.datamodel.PCObject.firePropertyChange(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  com.compendium.core.datamodel.MovieMapView.addMovie(Ljava/lang/String;Ljava/lang/String;JLjava/util/Vector;)Lcom/compendium/core/datamodel/Movie;+172
+j  com.compendium.ui.movie.UIMovieViewPanel$4.insertUpdate(Ljavax/swing/event/DocumentEvent;)V+126
+j  javax.swing.text.AbstractDocument.fireInsertUpdate(Ljavax/swing/event/DocumentEvent;)V+40
+j  javax.swing.text.AbstractDocument.handleInsertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+162
+j  javax.swing.text.AbstractDocument.insertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+46
+j  javax.swing.text.PlainDocument.insertString(ILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+104
+j  javax.swing.text.AbstractDocument.replace(IILjava/lang/String;Ljavax/swing/text/AttributeSet;)V+74
+j  javax.swing.text.JTextComponent.setText(Ljava/lang/String;)V+25
+j  com.compendium.ui.movie.UIMovieViewPanel$5.actionPerformed(Ljava/awt/event/ActionEvent;)V+253
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Ljava/awt/event/MouseEvent;)V+35
+j  java.awt.AWTEventMulticaster.mouseReleased(Ljava/awt/event/MouseEvent;)V+8
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+J  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+J  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(Ljava/awt/Conditional;Ljava/awt/Component;)V+4
+j  java.awt.Dialog$1.run()V+20
+j  java.awt.Dialog$2.run()Ljava/lang/Object;+4
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;+0
+j  java.awt.Dialog.show()V+98
+j  java.awt.Component.show(Z)V+5
+j  java.awt.Component.setVisible(Z)V+2
+j  com.compendium.ui.UIViewFrame.showContentDialog(I)Lcom/compendium/ui/dialogs/UINodeContentDialog;+27
+j  com.compendium.ui.movie.UIMovieMapViewFrame.showEditDialog()Lcom/compendium/ui/dialogs/UINodeContentDialog;+2
+j  com.compendium.ui.plaf.ViewPaneUI.mouseClicked(Ljava/awt/event/MouseEvent;)V+357
+j  com.compendium.ui.movie.MovieMapViewPaneUI.mouseClicked(Ljava/awt/event/MouseEvent;)V+15
+j  java.awt.AWTEventMulticaster.mouseClicked(Ljava/awt/event/MouseEvent;)V+21
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+74
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x041fc2f8 JavaThread "JMF thread: SendEventQueue: com.sun.media.PlaybackEngine" [_thread_blocked, id=6552]
+  0x041fc170 JavaThread "JMF thread: SendEventQueue: com.sun.media.content.unknown.Handler" [_thread_blocked, id=6476]
+  0x05b98cc8 JavaThread "Loop thread: com.sun.media.parser.video.AviParser$AudioTrack@bdff3b" [_thread_blocked, id=7868]
+  0x05b986b0 JavaThread "Loop thread: com.sun.media.renderer.audio.JavaSoundRenderer@1bf8a41" [_thread_blocked, id=5976]
+  0x05b982b8 JavaThread "Loop thread" [_thread_blocked, id=4572]
+  0x05b7d468 JavaThread "JMF thread: SendEventQueue: com.sun.media.PlaybackEngine" [_thread_blocked, id=4364]
+  0x05857e60 JavaThread "JMF thread: SendEventQueue: com.sun.media.content.unknown.Handler" [_thread_blocked, id=5348]
+  0x05b1bee0 JavaThread "JMF thread: SendEventQueue: com.sun.media.PlaybackEngine" [_thread_blocked, id=480]
+  0x035149f0 JavaThread "JMF thread: SendEventQueue: com.sun.media.content.unknown.Handler" [_thread_blocked, id=4140]
+  0x03f0ea30 JavaThread "JMF thread: SendEventQueue: com.sun.media.PlaybackEngine" [_thread_blocked, id=8188]
+  0x03f0e008 JavaThread "JMF thread: SendEventQueue: com.sun.media.content.unknown.Handler" [_thread_blocked, id=6920]
+  0x03ecbd18 JavaThread "Loop thread: com.sun.media.parser.video.AviParser$AudioTrack@ada795" [_thread_blocked, id=4376]
+  0x03ed4700 JavaThread "Loop thread: com.sun.media.renderer.audio.JavaSoundRenderer@1d866c5" [_thread_blocked, id=6668]
+  0x03ecb6b8 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=1132]
+  0x03f04380 JavaThread "Loop thread" [_thread_blocked, id=7788]
+  0x036c8b08 JavaThread "JMF thread: SendEventQueue: com.sun.media.PlaybackEngine" [_thread_blocked, id=6608]
+  0x03519bc0 JavaThread "JMF thread: SendEventQueue: com.sun.media.content.unknown.Handler" [_thread_blocked, id=5164]
+  0x036aeab8 JavaThread "JMF thread: SendEventQueue: com.sun.media.PlaybackEngine" [_thread_blocked, id=6448]
+  0x0351a3a0 JavaThread "JMF thread: SendEventQueue: com.sun.media.content.unknown.Handler" [_thread_blocked, id=6280]
+  0x035f5788 JavaThread "UINodeTimeLine thread" [_thread_blocked, id=7456]
+  0x03501718 JavaThread "JMF thread: SendEventQueue: com.compendium.ui.movie.MasterTimer" [_thread_blocked, id=4900]
+  0x036f0010 JavaThread "MySQL Statement Cancellation Timer" daemon [_thread_blocked, id=6844]
+  0x02f40bd8 JavaThread "TimerQueue" daemon [_thread_blocked, id=6372]
+  0x003a72f0 JavaThread "DestroyJavaVM" [_thread_blocked, id=7548]
+  0x0355ad80 JavaThread "derby.rawStoreDaemon" daemon [_thread_blocked, id=3924]
+  0x02fcde30 JavaThread "derby.rawStoreDaemon" daemon [_thread_blocked, id=5352]
+  0x02fc5650 JavaThread "Timer-0" daemon [_thread_blocked, id=6276]
+  0x02ef26c0 JavaThread "derby.antiGC" daemon [_thread_blocked, id=5308]
+=>0x02fa4560 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=4384]
+  0x02f09e10 JavaThread "AWT-Shutdown" [_thread_blocked, id=6592]
+  0x02ef2ae0 JavaThread "AWT-Windows" daemon [_thread_in_native, id=5776]
+  0x02e91760 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=4464]
+  0x00a72da8 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=7740]
+  0x00a71ab8 JavaThread "CompilerThread0" daemon [_thread_blocked, id=7256]
+  0x00a70dd0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6468]
+  0x00a6b070 JavaThread "Finalizer" daemon [_thread_blocked, id=6660]
+  0x00a6a4a0 JavaThread "Reference Handler" daemon [_thread_blocked, id=1296]
+
+Other Threads:
+  0x00a47e38 VMThread [id=2996]
+  0x00a70a48 WatcherThread [id=4668]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 6336K, used 1343K [0x06c20000, 0x07300000, 0x09380000)
+  eden space 5632K,  11% used [0x06c20000, 0x06cbfd30, 0x071a0000)
+  from space 704K, 100% used [0x07250000, 0x07300000, 0x07300000)
+  to   space 704K,   0% used [0x071a0000, 0x071a0000, 0x07250000)
+ tenured generation   total 83416K, used 52040K [0x09380000, 0x0e4f6000, 0x26c20000)
+   the space 83416K,  62% used [0x09380000, 0x0c652260, 0x0c652400, 0x0e4f6000)
+ compacting perm gen  total 16384K, used 16377K [0x26c20000, 0x27c20000, 0x2ac20000)
+   the space 16384K,  99% used [0x26c20000, 0x27c1e500, 0x27c1e600, 0x27c20000)
+    ro space 8192K,  67% used [0x2ac20000, 0x2b1823e0, 0x2b182400, 0x2b420000)
+    rw space 12288K,  47% used [0x2b420000, 0x2b9cf450, 0x2b9cf600, 0x2c020000)
+
+Dynamic libraries:
+0x00400000 - 0x0040d000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\javaw.exe
+0x7c900000 - 0x7c9b2000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c8f6000 	C:\WINDOWS\system32\kernel32.dll
+0x77dd0000 - 0x77e6b000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e70000 - 0x77f03000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77fe0000 - 0x77ff1000 	C:\WINDOWS\system32\Secur32.dll
+0x7e410000 - 0x7e4a1000 	C:\WINDOWS\system32\USER32.dll
+0x77f10000 - 0x77f59000 	C:\WINDOWS\system32\GDI32.dll
+0x77c10000 - 0x77c68000 	C:\WINDOWS\system32\MSVCRT.dll
+0x76390000 - 0x763ad000 	C:\WINDOWS\system32\IMM32.DLL
+0x6fa00000 - 0x6fa3e000 	C:\PROGRA~1\Sophos\SOPHOS~1\SOPHOS~1.DLL
+0x76bf0000 - 0x76bfb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x003b0000 - 0x003c7000 	C:\Program Files\Common Files\Logishrd\LVMVFM\LVPrcInj.dll
+0x6d740000 - 0x6d8dd000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\client\jvm.dll
+0x76b40000 - 0x76b6d000 	C:\WINDOWS\system32\WINMM.dll
+0x6d300000 - 0x6d308000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\hpi.dll
+0x6d710000 - 0x6d71c000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\verify.dll
+0x6d380000 - 0x6d39d000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\java.dll
+0x6d730000 - 0x6d73f000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\zip.dll
+0x6d070000 - 0x6d1da000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\awt.dll
+0x73000000 - 0x73026000 	C:\WINDOWS\system32\WINSPOOL.DRV
+0x774e0000 - 0x7761d000 	C:\WINDOWS\system32\ole32.dll
+0x5ad70000 - 0x5ada8000 	C:\WINDOWS\system32\uxtheme.dll
+0x73760000 - 0x737ab000 	C:\WINDOWS\system32\ddraw.dll
+0x73bc0000 - 0x73bc6000 	C:\WINDOWS\system32\DCIMAN32.dll
+0x6d2b0000 - 0x6d300000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\fontmanager.dll
+0x74720000 - 0x7476c000 	C:\WINDOWS\system32\MSCTF.dll
+0x755c0000 - 0x755ee000 	C:\WINDOWS\system32\msctfime.ime
+0x7c9c0000 - 0x7d1d7000 	C:\WINDOWS\system32\shell32.dll
+0x77f60000 - 0x77fd6000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x773d0000 - 0x774d3000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll
+0x5d090000 - 0x5d12a000 	C:\WINDOWS\system32\comctl32.dll
+0x6d440000 - 0x6d45f000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\jpeg.dll
+0x6d540000 - 0x6d553000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\net.dll
+0x71ab0000 - 0x71ac7000 	C:\WINDOWS\system32\WS2_32.dll
+0x71aa0000 - 0x71aa8000 	C:\WINDOWS\system32\WS2HELP.dll
+0x6d560000 - 0x6d569000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\nio.dll
+0x605d0000 - 0x605d9000 	C:\WINDOWS\system32\mslbui.dll
+0x71a50000 - 0x71a8f000 	C:\WINDOWS\System32\mswsock.dll
+0x76f20000 - 0x76f47000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76fb0000 - 0x76fb8000 	C:\WINDOWS\System32\winrnr.dll
+0x76f60000 - 0x76f8c000 	C:\WINDOWS\system32\WLDAP32.dll
+0x03480000 - 0x034a5000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x76d60000 - 0x76d79000 	C:\WINDOWS\system32\Iphlpapi.dll
+0x76fc0000 - 0x76fc6000 	C:\WINDOWS\system32\rasadhlp.dll
+0x662b0000 - 0x66308000 	C:\WINDOWS\system32\hnetcfg.dll
+0x71a90000 - 0x71a98000 	C:\WINDOWS\System32\wshtcpip.dll
+0x6d530000 - 0x6d538000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\management.dll
+0x6d230000 - 0x6d253000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\dcpr.dll
+0x03430000 - 0x03438000 	C:\Program Files\stickies\shook45.dll
+0x04880000 - 0x04b45000 	C:\WINDOWS\system32\xpsp2res.dll
+0x5b860000 - 0x5b8b5000 	C:\WINDOWS\system32\netapi32.dll
+0x71b20000 - 0x71b32000 	C:\WINDOWS\system32\MPR.dll
+0x75f60000 - 0x75f67000 	C:\WINDOWS\System32\drprov.dll
+0x71c10000 - 0x71c1e000 	C:\WINDOWS\System32\ntlanman.dll
+0x71cd0000 - 0x71ce7000 	C:\WINDOWS\System32\NETUI0.dll
+0x71c90000 - 0x71cd0000 	C:\WINDOWS\System32\NETUI1.dll
+0x71c80000 - 0x71c87000 	C:\WINDOWS\System32\NETRAP.dll
+0x71bf0000 - 0x71c03000 	C:\WINDOWS\System32\SAMLIB.dll
+0x75f70000 - 0x75f7a000 	C:\WINDOWS\System32\davclnt.dll
+0x77920000 - 0x77a13000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x77b40000 - 0x77b62000 	C:\WINDOWS\system32\appHelp.dll
+0x76fd0000 - 0x7704f000 	C:\WINDOWS\system32\CLBCATQ.DLL
+0x77050000 - 0x77115000 	C:\WINDOWS\system32\COMRes.dll
+0x77120000 - 0x771ab000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x77c00000 - 0x77c08000 	C:\WINDOWS\system32\VERSION.dll
+0x76980000 - 0x76988000 	C:\WINDOWS\system32\LINKINFO.dll
+0x76990000 - 0x769b5000 	C:\WINDOWS\system32\ntshrui.dll
+0x76b20000 - 0x76b31000 	C:\WINDOWS\system32\ATL.DLL
+0x769c0000 - 0x76a74000 	C:\WINDOWS\system32\USERENV.dll
+0x77a20000 - 0x77a74000 	C:\WINDOWS\System32\cscui.dll
+0x76600000 - 0x7661d000 	C:\WINDOWS\System32\CSCDLL.dll
+0x69440000 - 0x6b17e000 	D:\Eclipse\eclipse\workspace\compendium-full\fobs4jmf.dll
+0x71ad0000 - 0x71ad9000 	C:\WINDOWS\system32\WSOCK32.DLL
+0x6d4f0000 - 0x6d515000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\jsound.dll
+0x6d520000 - 0x6d528000 	C:\Program Files\Java\jdk1.5.0_13\jre\bin\jsoundds.dll
+0x73f10000 - 0x73f6c000 	C:\WINDOWS\system32\DSOUND.dll
+0x76c30000 - 0x76c5e000 	C:\WINDOWS\system32\WINTRUST.dll
+0x77a80000 - 0x77b15000 	C:\WINDOWS\system32\CRYPT32.dll
+0x77b20000 - 0x77b32000 	C:\WINDOWS\system32\MSASN1.dll
+0x76c90000 - 0x76cb8000 	C:\WINDOWS\system32\IMAGEHLP.dll
+0x72d20000 - 0x72d29000 	C:\WINDOWS\system32\wdmaud.drv
+0x72d10000 - 0x72d18000 	C:\WINDOWS\system32\msacm32.drv
+0x77be0000 - 0x77bf5000 	C:\WINDOWS\system32\MSACM32.dll
+0x77bd0000 - 0x77bd7000 	C:\WINDOWS\system32\midimap.dll
+0x73ee0000 - 0x73ee4000 	C:\WINDOWS\system32\KsUser.dll
+
+VM Arguments:
+jvm_args: -Xmx512m -Dfile.encoding=Cp1252
+java_command: com.compendium.ProjectCompendium
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files\Java\jre6\lib\ext\QTJava.zip
+PATH=C:/Program Files/Java/jre6/bin/client;C:/Program Files/Java/jre6/bin;C:/Program Files/Java/jre6/lib/i386;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;c:\OUClient\localnet\common;z:\moreapps\system;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\PROGRA~1\DISKEE~1\DISKEE~1\;C:\Program Files\Common Files\Adobe\AGL;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\SSH Communications Security\SSH Secure Shell
+USERNAME=msb262
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 15 Model 6 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 4 (cores per cpu 2, threads per core 2) family 15 model 6 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ht
+
+Memory: 4k page, physical 2094672k(545636k free), swap 4194303k(4194303k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_13-b05) for windows-x86, built on Sep 25 2007 19:11:52 by "java_re" with MS VC++ 6.0
+

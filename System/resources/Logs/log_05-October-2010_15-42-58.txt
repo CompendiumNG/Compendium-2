@@ -1,0 +1,74 @@
+05-October-2010_15-42-59: String index out of range: 9
+java.lang.StringIndexOutOfBoundsException: String index out of range: 9
+05-October-2010_15-42-59: 	at java.lang.String.substring(String.java:1765)
+05-October-2010_15-42-59: 	at com.compendium.core.CoreUtilities.isNewerVersion(CoreUtilities.java:130)
+05-October-2010_15-42-59: 	at com.compendium.ProjectCompendium.checkForUpdates(ProjectCompendium.java:338)
+05-October-2010_15-42-59: 	at com.compendium.ProjectCompendium.<init>(ProjectCompendium.java:176)
+05-October-2010_15-42-59: 	at com.compendium.ProjectCompendium.main(ProjectCompendium.java:141)
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown database 'test_1286289645970'
+05-October-2010_15-43-04: 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1026)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:298)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+05-October-2010_15-43-04: 	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+05-October-2010_15-43-04: 	at java.sql.DriverManager.getConnection(DriverManager.java:171)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBConnectionManager.connect(DBConnectionManager.java:415)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBConnectionManager.newConnection(DBConnectionManager.java:388)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBConnectionManager.getConnection(DBConnectionManager.java:536)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBDatabaseManager.requestConnection(DBDatabaseManager.java:245)
+05-October-2010_15-43-04: 	at com.compendium.ui.dialogs.UILogonDialog.<init>(UILogonDialog.java:156)
+05-October-2010_15-43-04: 	at com.compendium.ui.ProjectCompendiumFrame.createLogonScreen(ProjectCompendiumFrame.java:1572)
+05-October-2010_15-43-04: 	at com.compendium.ui.ProjectCompendiumFrame$4.run(ProjectCompendiumFrame.java:2379)
+05-October-2010_15-43-04: Error: (DBConnectionManager.getConnection) Unknown database 'test_1286289645970'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown database 'testing_delete_1286289006685'
+05-October-2010_15-43-04: 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1026)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:298)
+05-October-2010_15-43-04: 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+05-October-2010_15-43-04: 	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+05-October-2010_15-43-04: 	at java.sql.DriverManager.getConnection(DriverManager.java:171)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBConnectionManager.connect(DBConnectionManager.java:415)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBConnectionManager.newConnection(DBConnectionManager.java:388)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBConnectionManager.getConnection(DBConnectionManager.java:536)
+05-October-2010_15-43-04: 	at com.compendium.core.db.management.DBDatabaseManager.requestConnection(DBDatabaseManager.java:245)
+05-October-2010_15-43-04: 	at com.compendium.ui.dialogs.UILogonDialog.<init>(UILogonDialog.java:156)
+05-October-2010_15-43-04: 	at com.compendium.ui.ProjectCompendiumFrame.createLogonScreen(ProjectCompendiumFrame.java:1572)
+05-October-2010_15-43-04: 	at com.compendium.ui.ProjectCompendiumFrame$4.run(ProjectCompendiumFrame.java:2379)
+05-October-2010_15-43-04: Error: (DBConnectionManager.getConnection) Unknown database 'testing_delete_1286289006685'
+java.lang.NullPointerException
+05-October-2010_15-44-28: 	at javax.swing.JComponent._paintImmediately(JComponent.java:4854)
+05-October-2010_15-44-28: 	at javax.swing.JComponent.paintImmediately(JComponent.java:4675)
+05-October-2010_15-44-28: 	at javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:451)
+05-October-2010_15-44-28: 	at javax.swing.SystemEventQueueUtilities$ComponentWorkRequest.run(SystemEventQueueUtilities.java:114)
+05-October-2010_15-44-28: 	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+05-October-2010_15-44-28: 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:461)
+05-October-2010_15-44-28: 	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+05-October-2010_15-44-28: 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+05-October-2010_15-44-28: 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+05-October-2010_15-44-28: 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+05-October-2010_15-44-28: 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+05-October-2010_15-44-28: In paintImmediately null graphics
+05-October-2010_15-44-40: Fobs4JMF - Native shared library found
+05-October-2010_15-44-40: Fobs4JMF - Native shared library found
+05-October-2010_15-44-40: Little Endian
+05-October-2010_15-44-40: AVCODEC: Constructor
+05-October-2010_15-44-40: Setting datasource to com.omnividea.media.protocol.file.DataSource@3d5149 content type = video.ffmpeg
+05-October-2010_15-44-40: Opening Thread[JMF thread: com.sun.media.PlaybackEngine@fde050[ com.sun.media.PlaybackEngine@fde050 ] ( configureThread),9,system]
+05-October-2010_15-44-40: AVCODEC: close
+05-October-2010_15-44-58: Resetting Thread[Loop thread: com.omnividea.media.parser.video.AudioTrack@155bd22,5,system]
+05-October-2010_15-44-58: Opening Thread[Loop thread: com.omnividea.media.parser.video.AudioTrack@155bd22,5,system]
+05-October-2010_15-44-58: Closing Thread[AWT-EventQueue-0,6,main]

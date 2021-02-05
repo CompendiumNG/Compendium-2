@@ -1,0 +1,46 @@
+05-October-2010_15-35-49: String index out of range: 9
+java.lang.StringIndexOutOfBoundsException: String index out of range: 9
+05-October-2010_15-35-49: 	at java.lang.String.substring(String.java:1765)
+05-October-2010_15-35-49: 	at com.compendium.core.CoreUtilities.isNewerVersion(CoreUtilities.java:130)
+05-October-2010_15-35-49: 	at com.compendium.ProjectCompendium.checkForUpdates(ProjectCompendium.java:338)
+05-October-2010_15-35-49: 	at com.compendium.ProjectCompendium.<init>(ProjectCompendium.java:176)
+05-October-2010_15-35-49: 	at com.compendium.ProjectCompendium.main(ProjectCompendium.java:141)
+05-October-2010_15-35-54: Exception = Table 'testing_delete_1286289006685.system' doesn't exist
+05-October-2010_15-36-21: SQLException: (DBAdminDatabase.isAdministrator)
+
+Table 'testing_delete_1286289006685.users' doesn't exist
+05-October-2010_15-36-21: Error:Either the user details are not valid
+or you are not an administrator on this project
+
+05-October-2010_15-36-27: SQLException: (DBAdminDatabase.isAdministrator)
+
+Table 'testing_delete_1286289006685.users' doesn't exist
+05-October-2010_15-36-27: Error:Either the user details are not valid
+or you are not an administrator on this project
+
+java.lang.NullPointerException
+05-October-2010_15-41-14: 	at javax.swing.JComponent._paintImmediately(JComponent.java:4854)
+05-October-2010_15-41-14: 	at javax.swing.JComponent.paintImmediately(JComponent.java:4675)
+05-October-2010_15-41-14: 	at javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:451)
+05-October-2010_15-41-14: 	at javax.swing.SystemEventQueueUtilities$ComponentWorkRequest.run(SystemEventQueueUtilities.java:114)
+05-October-2010_15-41-14: 	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+05-October-2010_15-41-14: 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:461)
+05-October-2010_15-41-14: 	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+05-October-2010_15-41-14: 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+05-October-2010_15-41-14: 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+05-October-2010_15-41-14: 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+05-October-2010_15-41-14: 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+05-October-2010_15-41-14: In paintImmediately null graphics
+05-October-2010_15-41-28: Fobs4JMF - Native shared library found
+05-October-2010_15-41-28: Fobs4JMF - Native shared library found
+05-October-2010_15-41-28: Little Endian
+05-October-2010_15-41-28: AVCODEC: Constructor
+05-October-2010_15-41-28: Setting datasource to com.omnividea.media.protocol.file.DataSource@beebcd content type = video.ffmpeg
+05-October-2010_15-41-28: Opening Thread[JMF thread: com.sun.media.PlaybackEngine@18efd7c[ com.sun.media.PlaybackEngine@18efd7c ] ( configureThread),9,system]
+05-October-2010_15-41-28: AVCODEC: close
+05-October-2010_15-41-29: Resetting Thread[Loop thread: com.omnividea.media.parser.video.AudioTrack@c94114,5,system]
+05-October-2010_15-41-29: Opening Thread[Loop thread: com.omnividea.media.parser.video.AudioTrack@c94114,5,system]
+05-October-2010_15-41-30: Closing Thread[AWT-EventQueue-0,6,main]
+05-October-2010_15-41-42: Error:The' test' project could not be deleted due to the following error:
+
+Cannot delete or update a parent row: a foreign key constraint fails

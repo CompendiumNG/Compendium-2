@@ -1,0 +1,9 @@
+05-January-2021_12-14-10: http://compendium.open.ac.uk/institute/download/version.txt
+java.io.FileNotFoundException: http://compendium.open.ac.uk/institute/download/version.txt
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1896)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
+	at com.compendium.io.http.HttpFileDownloadInputStream.<init>(HttpFileDownloadInputStream.java:69)
+	at com.compendium.ProjectCompendium.checkVersion(ProjectCompendium.java:331)
+	at com.compendium.ProjectCompendium.<init>(ProjectCompendium.java:173)
+	at com.compendium.ProjectCompendium.main(ProjectCompendium.java:140)
+05-January-2021_12-24-39: Unable to shutdown Derby: Derby system shutdown.

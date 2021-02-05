@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE search [
+<!ELEMENT search (#PCDATA | keywords | nodetypes)*>
+<!ATTLIST search
+name CDATA #REQUIRED
+id CDATA #REQUIRED
+contenttype CDATA
+>
+
+<!ELEMENT keywords (#PCDATA)>
+<!ATTLIST keywords
+match
+checklabel
+checkdetail
+>
+
+<!ELEMENT nodetypes (nodetype)*>
+<!ELEMENT nodetype>
+<!ATTLIST nodetype
+id CDATA #REQUIRED
+>
+]>
+
+<search name="search 1" id="1" contenttype="current/all/alldeleted">
+	<keywords match="any/all" checklabel="true" checkdetail="true">fred</keywords>
+	<nodetypes>
+		<nodetype id="" />
+	</nodetypes>
+	<tags match="any/all">
+		<tag id="" />
+	</tags>	
+	<creationdate after="" before="" />
+	<modificationdate after="" before="" />
+	<authors>
+		<author id="" />
+	<authors>
+</search>
